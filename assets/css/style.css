@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
+
+:root {
+    --green: #176b35;
+    --deep: #104b27;
+    --lime: #dff0c9;
+    --cream: #fff9e9;
+    --yellow: #ffe36e;
+    --red: #d83a2e;
+    --ink: #29251e;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f8f5e9;
+    color: var(--ink);
+    font-family: 'Nunito', sans-serif;
+}
+
+.app-shell {
+    min-height: 100vh;
+    display: flex;
+}
+
+.sidebar {
+    width: 245px;
+    background: linear-gradient(160deg, #155b2d, #0d3f20);
+    color: white;
+    position: fixed;
+    inset: 0 auto 0 0;
+    padding: 22px 16px;
+    display: flex;
+    flex-direction: column;
+    z-index: 20;
+}
+
+.brand {
+    text-align: center;
+    padding-bottom: 22px;
+    margin-bottom: 15px;
+    font-weight: 900;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.brand img {
+    width: 112px;
+    height: 112px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 8px;
+}
+
+.sidebar nav {
+    display: grid;
+    gap: 7px;
+}
+
+.sidebar nav a,
+.sidebar-bottom a {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 13px;
+    border-radius: 12px;
+    font-weight: 800;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+    background: var(--yellow);
+    color: var(--deep);
+}
+
+.sidebar nav i,
+.sidebar-bottom i {
+    width: 25px;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+}
+
+.main-area {
+    margin-left: 245px;
+    width: calc(100% - 245px);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.topbar {
+    height: 82px;
+    background: #fffdf6;
+    border-bottom: 1px solid #eee4ca;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 28px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.top-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.top-brand img {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+}
+
+.top-brand strong {
+    display: block;
+    color: var(--deep);
+    font-size: 19px;
+}
+
+.top-brand small {
+    color: #806b43;
+}
+
+.user-chip {
+    background: #edf5df;
+    padding: 10px 15px;
+    border-radius: 30px;
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    font-weight: 800;
+}
+
+.content {
+    padding: 25px;
+    flex: 1;
+}
+
+.footer {
+    background: var(--deep);
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.footer span {
+    color: var(--yellow);
+    margin-left: 10px;
+}
+
+.page-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.page-heading h1 {
+    font-size: 25px;
+    font-weight: 900;
+    color: var(--deep);
+    margin: 0;
+}
+
+.muted {
+    color: #81775f;
+}
+
+.hero {
+    background:
+        linear-gradient(100deg, #174f28b0, #174f2850),
+        url('https://image.idntimes.com/post/20220416/fromandroid-bceb6adefdd0d24f94e4bbd36aeff968.jpg')
+        center center;
+    border-radius: 20px;
+    color: #fff;
+    padding: 30px;
+    margin-bottom: 22px;
+    min-height: 200px;
+}
+
+.hero h2 {
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.stat-card,
+.panel,
+.form-card {
+    background: white;
+    border: 1px solid #eee7d5;
+    border-radius: 17px;
+    padding: 20px;
+    box-shadow: 0 4px 16px #44330d0c;
+}
+
+.stat-card .num {
+    font-size: 27px;
+    font-weight: 900;
+    color: var(--green);
+}
+
+.stat-card i {
+    font-size: 24px;
+    color: #a6bf75;
+}
+
+.btn-green {
+    background: var(--green);
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    font-weight: 800;
+    padding: 10px 16px;
+}
+
+.btn-green:hover {
+    background: var(--deep);
+    color: white;
+}
+
+.btn-soft {
+    background: #edf5df;
+    color: var(--deep);
+    border: 0;
+    border-radius: 10px;
+    font-weight: 800;
+}
+
+.table thead th {
+    background: #edf5df;
+    color: var(--deep);
+    white-space: nowrap;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.menu-photo {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+    background: #f4f0e5;
+}
+
+.menu-card {
+    height: 100%;
+    border: 1px solid #eee5d1;
+    border-radius: 15px;
+    overflow: hidden;
+    background: white;
+    transition: .2s;
+    box-shadow: 0 3px 10px #3324000b;
+}
+
+.menu-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px #33240020;
+}
+
+.menu-card-body {
+    padding: 13px;
+}
+
+.menu-card h3 {
+    font-size: 15px;
+    font-weight: 900;
+    min-height: 38px;
+}
+
+.price {
+    font-size: 17px;
+    color: var(--green);
+    font-weight: 900;
+}
+
+.category-pills {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
+
+.category-pills a {
+    padding: 8px 15px;
+    background: #f5ecd6;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #51452e;
+    font-weight: 800;
+}
+
+.category-pills a.active {
+    background: var(--green);
+    color: white;
+}
+
+.status-pill {
+    font-size: 12px;
+    border-radius: 20px;
+    padding: 5px 9px;
+    background: #e6f3dd;
+    color: #176b35;
+    font-weight: 900;
+}
+
+.status-off {
+    background: #fde7e3;
+    color: #a52c23;
+}
+
+.form-label {
+    font-weight: 800;
+    color: #55472d;
+}
+
+.form-control,
+.form-select {
+    border-radius: 10px;
+    padding: 10px;
+    border-color: #e5dcc7;
+}
+
+.cart-panel {
+    position: sticky;
+    top: 100px;
+}
+
+.cart-line {
+    border-bottom: 1px solid #eee7d8;
+    padding: 10px 0;
+}
+
+.cart-total {
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--green);
+}
+
+.empty {
+    text-align: center;
+    padding: 35px 10px;
+    color: #958d7a;
+}
+
+.receipt {
+    max-width: 420px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border: 1px dashed #aaa;
+}
+
+.receipt-logo {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+}
+
+.image-preview {
+    width: 100%;
+    max-height: 220px;
+    object-fit: contain;
+    background: #faf7ed;
+    border-radius: 12px;
+}
+
+.pagination .page-link {
+    color: var(--green);
+}
+
+.pagination .active .page-link {
+    background: var(--green);
+    border-color: var(--green);
+}
+
+/* Tampilan tablet dan layar kecil */
+@media (max-width: 991px) {
+    .sidebar {
+        transform: translateX(-100%);
+        transition: .25s;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .main-area {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .content {
+        padding: 18px;
+    }
+
+    .topbar {
+        padding: 10px 15px;
+    }
+
+    .top-brand strong {
+        font-size: 15px;
+    }
+
+    .top-brand small {
+        font-size: 11px;
+    }
+
+    .cart-panel {
+        position: static;
+    }
+}
+
+/* Tampilan HP */
+@media (max-width: 575px) {
+    .top-brand img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .user-chip {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .content {
+        padding: 13px;
+    }
+
+    .page-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .page-heading h1 {
+        font-size: 22px;
+    }
+
+    .hero {
+        padding: 22px;
+        min-height: 120px;
+    }
+
+    .hero h2 {
+        font-size: 23px;
+    }
+
+    .menu-photo {
+        height: 125px;
+    }
+
+    .menu-card-body {
+        padding: 10px;
+    }
+
+    .menu-card h3 {
+        font-size: 13px;
+    }
+
+    .price {
+        font-size: 15px;
+    }
+
+    .footer {
+        font-size: 12px;
+    }
+
+    .footer span {
+        display: block;
+        margin: 3px 0 0;
+    }
+
+    .table-responsive {
+        font-size: 13px;
+    }
+}
